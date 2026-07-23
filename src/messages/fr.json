@@ -2,7 +2,7 @@
   "nav": {
     "experiences": "Expériences",
     "excursions": "Excursions",
-    "desert": "Désert",
+    "desert": "Circuits",
     "gallery": "Galerie",
     "contact": "Contact",
     "bookNow": "Réserver",
@@ -15,8 +15,8 @@
   },
   "hero": {
     "tagline": "Marrakech · Agafay · Sahara",
-    "headline": "Marrakech, votre base",
-    "headline2": "pour toutes vos aventures.",
+    "headline": "Tout le Maroc,",
+    "headline2": "depuis Marrakech.",
     "subheadline": "Transferts, adrénaline à Agafay, excursions culturelles et circuits dans le désert — vivez le Maroc depuis Marrakech.",
     "cta": "Réserver votre aventure",
     "ctaSecondary": "Découvrir nos expériences",

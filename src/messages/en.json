@@ -2,7 +2,7 @@
   "nav": {
     "experiences": "Experiences",
     "excursions": "Excursions",
-    "desert": "Desert",
+    "desert": "Circuits",
     "gallery": "Gallery",
     "contact": "Contact",
     "bookNow": "Book Now",
@@ -15,8 +15,8 @@
   },
   "hero": {
     "tagline": "Marrakech · Agafay · Sahara",
-    "headline": "Marrakech, your base",
-    "headline2": "for every kind of adventure.",
+    "headline": "All of Morocco,",
+    "headline2": "from Marrakech.",
     "subheadline": "Airport transfers, Agafay adrenaline, cultural day trips and desert circuits — experience Morocco from Marrakech.",
     "cta": "Book your adventure",
     "ctaSecondary": "Explore experiences",
