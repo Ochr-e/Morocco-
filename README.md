@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Ochre Morocco — Desert Adventure & Excursion
+
+Premium marketing website for Ochre Morocco, a Marrakech-based desert adventure and excursion tour operator.
+
+## Tech Stack
+
+- **Next.js 14** (App Router)
+- **TypeScript**
+- **Tailwind CSS**
+- **next-intl** — French / English / Arabic (with RTL)
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+src/
+├── app/[locale]/          # Pages (locale-prefixed routing)
+├── components/
+│   ├── layout/            # Header, Footer, WhatsAppButton
+│   ├── sections/          # Hero, Experiences, Trust, Gallery
+│   └── ui/                # DesertDivider, BookingModal
+├── i18n/                  # next-intl routing & request config
+├── lib/                   # Activities data
+└── messages/              # fr.json / en.json / ar.json
+```
 
-## Learn More
+## Features (Phase 1 — Design Preview)
 
-To learn more about Next.js, take a look at the following resources:
+- ✅ Multi-language (FR/EN/AR) with RTL support
+- ✅ Mobile-first responsive design
+- ✅ Hero section with desert SVG landscape + parallax
+- ✅ Experiences section (4 categories, all activities)
+- ✅ Booking modal (date → people → review → WhatsApp confirmation)
+- ✅ Trust section with testimonials + certifications
+- ✅ Gallery mosaic
+- ✅ Floating WhatsApp button
+- ✅ Signature desert-horizon gradient divider
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Roadmap
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Phase 2**: Stripe card payments + cash option + booking dashboard
+- **Phase 3**: Mobile app (React Native / Expo) for Play Store & App Store
 
-## Deploy on Vercel
+## Brand Palette
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| Token | Hex | Usage |
+|-------|-----|-------|
+| Ochre | `#C1652F` | Primary CTA, headings |
+| Sand | `#E8DCC8` | Backgrounds, borders |
+| Charcoal | `#2B2521` | Dark sections, text |
+| Cream | `#F7F1E8` | Main background |
+| Gold | `#B8934A` | Accents, dividers, hover states |

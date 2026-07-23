@@ -1,0 +1,197 @@
+{
+  "nav": {
+    "experiences": "Expériences",
+    "excursions": "Excursions",
+    "desert": "Désert",
+    "gallery": "Galerie",
+    "contact": "Contact",
+    "bookNow": "Réserver",
+    "languages": {
+      "fr": "Français",
+      "en": "English",
+      "ar": "العربية"
+    }
+  },
+  "hero": {
+    "tagline": "Marrakech · Agafay · Sahara",
+    "headline": "Le Sahara vous attend.",
+    "headline2": "Marrakech vous appelle.",
+    "subheadline": "Excursions et aventures de luxe depuis Marrakech — sur mesure, pour les voyageurs exigeants.",
+    "cta": "Réserver votre aventure",
+    "ctaSecondary": "Découvrir nos expériences",
+    "scroll": "Défiler"
+  },
+  "experiences": {
+    "title": "Nos Expériences",
+    "subtitle": "Quatre façons de vivre le Maroc — chacune avec sa propre âme.",
+    "categories": {
+      "transfer": {
+        "label": "Transfert",
+        "title": "Transfert Aéroport",
+        "tagline": "Arrivez. Nous gérons le reste.",
+        "description": "Transfert privé et confortable depuis/vers l'aéroport Marrakech-Menara. Chauffeur professionnel, ponctualité garantie.",
+        "price": "À partir de 15€",
+        "duration": "30 min",
+        "badge": "Service discret"
+      },
+      "adrenaline": {
+        "label": "Adrénaline",
+        "title": "Journées Adrénaline",
+        "tagline": "Le désert d'Agafay comme terrain de jeu.",
+        "description": "Quad, dromadaire, montgolfière, parapente — des expériences qui redéfinissent votre rapport à l'horizon.",
+        "badge": "Sensations fortes"
+      },
+      "excursions": {
+        "label": "Excursions",
+        "title": "Excursions à la Journée",
+        "tagline": "Le Maroc dans toute sa diversité.",
+        "description": "Essaouira, Ouzoud, Ourika, Aït Ben Haddou — chaque destination révèle une autre facette du Royaume.",
+        "badge": "Guides certifiés"
+      },
+      "desert": {
+        "label": "Désert",
+        "title": "Circuits Désert",
+        "tagline": "Dormez sous les étoiles du Sahara.",
+        "description": "Zagora ou Merzouga — nos circuits multi-jours vous emmènent au cœur du Grand Sud marocain.",
+        "badge": "Expérience premium"
+      }
+    }
+  },
+  "activities": {
+    "title": "Toutes nos activités",
+    "filters": {
+      "all": "Tout voir",
+      "transfer": "Transfert",
+      "adrenaline": "Adrénaline",
+      "excursion": "Excursion",
+      "desert": "Désert"
+    },
+    "bookNow": "Réserver",
+    "from": "À partir de",
+    "perPerson": "/ pers.",
+    "duration": "Durée",
+    "includes": "Inclus"
+  },
+  "trust": {
+    "title": "Ils ont vécu l'aventure",
+    "subtitle": "Des voyageurs du monde entier nous font confiance.",
+    "stats": {
+      "clients": "clients satisfaits",
+      "years": "années d'expérience",
+      "rating": "note moyenne",
+      "guides": "guides certifiés"
+    },
+    "testimonials": [
+      {
+        "name": "Sophie Marchand",
+        "origin": "Paris, France",
+        "text": "Une journée dans le désert d'Agafay absolument magique. L'organisation était parfaite, le guide passionné, et le dîner sous les étoiles... inoubliable. Je recommande Ochre Morocco les yeux fermés.",
+        "tour": "Pack Désert Agafay",
+        "rating": 5
+      },
+      {
+        "name": "James & Emily Carter",
+        "origin": "London, UK",
+        "text": "The hot air balloon ride over the Atlas Mountains was the highlight of our Moroccan trip. Absolutely world-class service — professional, safe, and breathtakingly beautiful.",
+        "tour": "Montgolfière Atlas",
+        "rating": 5
+      },
+      {
+        "name": "María González",
+        "origin": "Madrid, España",
+        "text": "El tour de 3 días al desierto de Merzouga fue una experiencia transformadora. Las dunas al amanecer, el campamento bereber, la hospitalidad marroquí... simplemente perfecto.",
+        "tour": "Circuit Merzouga 3j/2n",
+        "rating": 5
+      }
+    ],
+    "certifications": {
+      "title": "Sécurité & Certifications",
+      "items": [
+        "Guides agréés par le Ministère du Tourisme marocain",
+        "Véhicules assurés et régulièrement entretenus",
+        "Activités conformes aux normes de sécurité internationales",
+        "Assistance 24h/24 pendant vos excursions"
+      ]
+    },
+    "whatsapp": {
+      "title": "Besoin d'un conseil personnalisé?",
+      "subtitle": "Notre équipe répond en français, anglais et arabe.",
+      "cta": "Nous contacter sur WhatsApp"
+    }
+  },
+  "gallery": {
+    "title": "Galerie",
+    "subtitle": "Le Maroc, capturé dans sa lumière la plus dorée.",
+    "alt": {
+      "dunes": "Dunes du Sahara au coucher du soleil",
+      "balloon": "Montgolfière au-dessus de Marrakech",
+      "camel": "Caravane de dromadaires dans le désert",
+      "atlas": "Sommets enneigés de l'Atlas",
+      "kasbah": "Kasbah d'Aït Ben Haddou",
+      "palmery": "Palmeraie de Marrakech"
+    }
+  },
+  "booking": {
+    "title": "Réserver votre expérience",
+    "steps": {
+      "date": "Choisir la date",
+      "people": "Nombre de personnes",
+      "review": "Récapitulatif",
+      "payment": "Paiement"
+    },
+    "selectDate": "Sélectionnez une date",
+    "adults": "Adultes",
+    "children": "Enfants (3-12 ans)",
+    "free": "Gratuit",
+    "total": "Total estimé",
+    "perPerson": "/ pers.",
+    "continue": "Continuer",
+    "back": "Retour",
+    "continuePayment": "Continuer vers le paiement",
+    "paymentNote": "Paiement sécurisé disponible bientôt — vous serez redirigé vers WhatsApp pour confirmer votre réservation.",
+    "confirmWhatsApp": "Confirmer par WhatsApp",
+    "whatsappMessage": "Bonjour Ochre Morocco, je souhaite réserver : {activity} le {date} pour {people} personnes. Merci !",
+    "labels": {
+      "date": "Date souhaitée",
+      "participants": "Participants",
+      "summary": "Votre réservation",
+      "activity": "Activité",
+      "subtotal": "Sous-total",
+      "depositNote": "Acompte de 30% demandé à la réservation"
+    }
+  },
+  "footer": {
+    "tagline": "Desert Adventure & Excursion",
+    "address": "Marrakech, Maroc",
+    "phone": "+212 6XX XXX XXX",
+    "email": "hello@ochre-morocco.com",
+    "sections": {
+      "experiences": "Expériences",
+      "company": "Ochre Morocco",
+      "legal": "Légal"
+    },
+    "links": {
+      "agafay": "Pack Agafay",
+      "balloon": "Montgolfière",
+      "paragliding": "Parapente",
+      "excursions": "Excursions",
+      "desert": "Circuits Désert",
+      "about": "À propos",
+      "contact": "Contact",
+      "faq": "FAQ",
+      "terms": "Conditions générales",
+      "privacy": "Confidentialité"
+    },
+    "social": {
+      "instagram": "Instagram",
+      "facebook": "Facebook",
+      "tripadvisor": "TripAdvisor"
+    },
+    "copyright": "© {year} Ochre Morocco. Tous droits réservés.",
+    "madeWith": "Fait avec ♥ à Marrakech"
+  },
+  "whatsapp": {
+    "tooltip": "Discutez avec nous",
+    "defaultMessage": "Bonjour Ochre Morocco ! Je suis intéressé(e) par vos excursions. Pouvez-vous m'aider ?"
+  }
+}
