@@ -1,12 +1,22 @@
+import { setRequestLocale, getTranslations } from "next-intl/server";
+import { routing } from "@/i18n/routing";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import WhatsAppButton from "@/components/layout/WhatsAppButton";
 import Link from "next/link";
-import { getLocale, getTranslations } from "next-intl/server";
 
-export default async function BookingPage() {
-  const locale = await getLocale();
-  const t = await getTranslations("booking");
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
+
+type Props = {
+  params: Promise<{ locale: string }>;
+};
+
+export default async function BookingPage({ params }: Props) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "booking" });
 
   const activities = [
     { id: "agafay-pack", name: "Pack Désert Agafay", price: 65, category: "adrenaline" },
@@ -22,7 +32,6 @@ export default async function BookingPage() {
       <Header />
       <main className="min-h-screen bg-cream pt-32 pb-24">
         <div className="max-w-4xl mx-auto px-6">
-          {/* Header */}
           <div className="text-center mb-16">
             <span
               className="text-xs tracking-[0.4em] font-sans font-medium uppercase mb-4 block"
@@ -42,7 +51,6 @@ export default async function BookingPage() {
             />
           </div>
 
-          {/* Activity selection */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-12">
             {activities.map((act) => (
               <Link
@@ -57,12 +65,18 @@ export default async function BookingPage() {
                   <span
                     className="text-xs font-sans px-2 py-0.5 rounded-full"
                     style={{
-                      background: act.category === "desert"
-                        ? "rgba(184,147,74,0.15)"
-                        : act.category === "adrenaline"
-                        ? "rgba(193,101,47,0.12)"
-                        : "rgba(43,37,33,0.08)",
-                      color: act.category === "desert" ? "#B8934A" : act.category === "adrenaline" ? "#C1652F" : "#2B2521",
+                      background:
+                        act.category === "desert"
+                          ? "rgba(184,147,74,0.15)"
+                          : act.category === "adrenaline"
+                          ? "rgba(193,101,47,0.12)"
+                          : "rgba(43,37,33,0.08)",
+                      color:
+                        act.category === "desert"
+                          ? "#B8934A"
+                          : act.category === "adrenaline"
+                          ? "#C1652F"
+                          : "#2B2521",
                     }}
                   >
                     {act.category}
@@ -78,16 +92,25 @@ export default async function BookingPage() {
             ))}
           </div>
 
-          {/* CTA back */}
           <div className="text-center">
             <Link
               href={`/${locale}`}
               className="inline-flex items-center gap-2 text-charcoal/50 hover:text-ochre font-sans text-sm transition-colors"
             >
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                <path d="M10 3L5 8L10 13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                <path
+                  d="M10 3L5 8L10 13"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
               </svg>
-              {locale === "fr" ? "Retour à l'accueil" : locale === "ar" ? "العودة للرئيسية" : "Back to home"}
+              {locale === "fr"
+                ? "Retour à l'accueil"
+                : locale === "ar"
+                ? "العودة للرئيسية"
+                : "Back to home"}
             </Link>
           </div>
         </div>

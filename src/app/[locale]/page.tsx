@@ -1,3 +1,5 @@
+import { setRequestLocale } from "next-intl/server";
+import { routing } from "@/i18n/routing";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import WhatsAppButton from "@/components/layout/WhatsAppButton";
@@ -7,7 +9,18 @@ import TrustSection from "@/components/sections/TrustSection";
 import GallerySection from "@/components/sections/GallerySection";
 import DesertDivider from "@/components/ui/DesertDivider";
 
-export default function HomePage() {
+type Props = {
+  params: Promise<{ locale: string }>;
+};
+
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
+
+export default async function HomePage({ params }: Props) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
   return (
     <>
       <Header />
