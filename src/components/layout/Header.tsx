@@ -5,6 +5,7 @@ import { useTranslations, useLocale } from "next-intl";
 import { useRouter, usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
+import { BASE_PATH } from "@/lib/basePath";
 
 const locales = ["fr", "en", "ar", "es"] as const;
 
@@ -54,7 +55,7 @@ export default function Header() {
         {/* Logo */}
         <Link href={`/${locale}`} className="flex items-center gap-3 group">
           <Image
-            src="/logo.png"
+            src={`${BASE_PATH}/logo.png`}
             alt="Ochre Morocco"
             width={48}
             height={48}

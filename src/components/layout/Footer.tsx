@@ -3,6 +3,7 @@
 import { useTranslations, useLocale } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
+import { BASE_PATH } from "@/lib/basePath";
 
 export default function Footer() {
   const t = useTranslations("footer");
@@ -19,7 +20,7 @@ export default function Footer() {
           <div className="md:col-span-1">
             <div className={`flex items-center gap-3 mb-4 ${isRTL ? "flex-row-reverse" : ""}`}>
               <Image
-                src="/logo.png"
+                src={`${BASE_PATH}/logo.png`}
                 alt="Ochre Morocco"
                 width={44}
                 height={44}

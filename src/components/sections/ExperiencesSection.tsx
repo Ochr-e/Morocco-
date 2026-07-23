@@ -147,8 +147,8 @@ const CATEGORY_STYLES = {
   adrenaline: {
     bg: "bg-ochre",
     accent: "#F7F1E8",
-    taglineColor: "text-cream/70",
-    labelBg: "bg-cream/20",
+    taglineColor: "text-cream/85",
+    labelBg: "bg-cream/25",
     labelText: "text-cream",
   },
   excursion: {
@@ -160,10 +160,10 @@ const CATEGORY_STYLES = {
   },
   desert: {
     bg: "bg-gold",
-    accent: "#F7F1E8",
-    taglineColor: "text-cream/70",
-    labelBg: "bg-cream/20",
-    labelText: "text-cream",
+    accent: "#2B2521",
+    taglineColor: "text-charcoal/70",
+    labelBg: "bg-charcoal/10",
+    labelText: "text-charcoal",
   },
 };
 

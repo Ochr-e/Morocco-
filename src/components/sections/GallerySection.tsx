@@ -3,6 +3,7 @@
 import { useTranslations, useLocale } from "next-intl";
 import { useState } from "react";
 import Image from "next/image";
+import { BASE_PATH } from "@/lib/basePath";
 
 const GALLERY_ITEMS = [
   {
@@ -98,7 +99,7 @@ export default function GallerySection() {
             >
               {/* Real image */}
               <Image
-                src={item.src}
+                src={`${BASE_PATH}${item.src}`}
                 alt={t(`alt.${item.key}` as Parameters<typeof t>[0])}
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
