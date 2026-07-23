@@ -19,6 +19,8 @@ export const metadata: Metadata = {
     "parapente atlas",
     "essaouira day trip",
     "ochre morocco",
+    "excursiones marrakech",
+    "desierto marruecos",
   ],
   openGraph: {
     title: "Ochre Morocco — Desert Adventure & Excursion",
@@ -42,7 +44,7 @@ type Props = {
 export default async function LocaleLayout({ children, params }: Props) {
   const { locale } = await params;
 
-  if (!routing.locales.includes(locale as "fr" | "en" | "ar")) {
+  if (!routing.locales.includes(locale as "fr" | "en" | "ar" | "es")) {
     notFound();
   }
 

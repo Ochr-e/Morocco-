@@ -6,7 +6,7 @@ import { useRouter, usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 
-const locales = ["fr", "en", "ar"] as const;
+const locales = ["fr", "en", "ar", "es"] as const;
 
 export default function Header() {
   const t = useTranslations("nav");

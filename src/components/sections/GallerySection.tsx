@@ -2,48 +2,47 @@
 
 import { useTranslations, useLocale } from "next-intl";
 import { useState } from "react";
+import Image from "next/image";
 
-// Gallery items with gradient placeholders + descriptive metadata
-// In Phase 2, replace `bg` with actual <Image> components
 const GALLERY_ITEMS = [
   {
     key: "dunes",
-    bg: "linear-gradient(160deg, #8B4A2B 0%, #C1652F 40%, #E8823A 70%, #B8934A 100%)",
+    src: "/gallery/dunes.jpg",
     span: "col-span-2 row-span-2",
     label: "Erg Chebbi · Merzouga",
     icon: "🏜",
   },
   {
     key: "balloon",
-    bg: "linear-gradient(135deg, #1A0F08 0%, #3D2015 40%, #C1652F 80%, #F5C842 100%)",
+    src: "/gallery/balloon.jpg",
     span: "col-span-1 row-span-1",
     label: "Montgolfière · Atlas",
     icon: "🎈",
   },
   {
     key: "camel",
-    bg: "linear-gradient(150deg, #B8934A 0%, #C1652F 50%, #8B4A2B 100%)",
+    src: "/gallery/camel.jpg",
     span: "col-span-1 row-span-1",
     label: "Palmeraie · Marrakech",
     icon: "🐪",
   },
   {
     key: "kasbah",
-    bg: "linear-gradient(135deg, #2B1A0D 0%, #7A3518 50%, #C1652F 100%)",
+    src: "/gallery/kasbah.jpg",
     span: "col-span-1 row-span-2",
     label: "Aït Ben Haddou · UNESCO",
     icon: "🏰",
   },
   {
     key: "atlas",
-    bg: "linear-gradient(160deg, #E8DCC8 0%, #B8934A 40%, #8B4A2B 100%)",
+    src: "/gallery/atlas.jpg",
     span: "col-span-1 row-span-1",
     label: "Massif · Atlas",
     icon: "⛰",
   },
   {
     key: "palmery",
-    bg: "linear-gradient(135deg, #1a3a1a 0%, #2d5a2d 40%, #B8934A 100%)",
+    src: "/gallery/essaouira.jpg",
     span: "col-span-1 row-span-1",
     label: "Essaouira · Atlantique",
     icon: "🌊",
@@ -92,16 +91,22 @@ export default function GallerySection() {
             <div
               key={item.key}
               className={`${item.span} relative rounded-2xl overflow-hidden cursor-pointer group`}
-              style={{ background: item.bg }}
               onMouseEnter={() => setHovered(item.key)}
               onMouseLeave={() => setHovered(null)}
               role="img"
               aria-label={t(`alt.${item.key}` as Parameters<typeof t>[0])}
             >
-              {/* Overlay */}
-              <div
-                className="absolute inset-0 bg-charcoal/20 transition-opacity duration-300 group-hover:opacity-0"
+              {/* Real image */}
+              <Image
+                src={item.src}
+                alt={t(`alt.${item.key}` as Parameters<typeof t>[0])}
+                fill
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
+
+              {/* Dark overlay */}
+              <div className="absolute inset-0 bg-charcoal/25 transition-opacity duration-300 group-hover:opacity-0" />
 
               {/* Hover overlay */}
               <div
@@ -116,26 +121,15 @@ export default function GallerySection() {
                 </div>
               </div>
 
-              {/* Label (always visible on mobile) */}
+              {/* Label on mobile */}
               <div className="absolute bottom-3 left-3 md:hidden">
-                <div
-                  className="bg-charcoal/70 backdrop-blur-sm rounded-full px-3 py-1 text-cream text-xs font-sans"
-                >
+                <div className="bg-charcoal/70 backdrop-blur-sm rounded-full px-3 py-1 text-cream text-xs font-sans">
                   {item.label}
                 </div>
               </div>
             </div>
           ))}
         </div>
-
-        {/* Photo credit note */}
-        <p className="text-center text-charcoal/30 font-sans text-xs mt-6 italic">
-          {locale === "fr"
-            ? "Photographies représentatives — images réelles disponibles sur demande"
-            : locale === "ar"
-            ? "صور تمثيلية — الصور الحقيقية متاحة عند الطلب"
-            : "Representative visuals — real photography available on request"}
-        </p>
       </div>
     </section>
   );

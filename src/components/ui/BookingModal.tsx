@@ -56,6 +56,8 @@ export default function BookingModal({ activity, onClose }: BookingModalProps) {
       ? activity.durationFr
       : locale === "ar"
       ? activity.durationAr
+      : locale === "es"
+      ? activity.durationEs
       : activity.durationEn;
 
   return (
@@ -93,7 +95,7 @@ export default function BookingModal({ activity, onClose }: BookingModalProps) {
               <span className="text-charcoal/40 font-sans text-xs">{dur}</span>
               <span className="text-charcoal/20">·</span>
               <span className="text-ochre font-sans text-xs font-semibold">
-                {activity.price}{activity.currency} / {locale === "fr" ? "pers." : locale === "ar" ? "شخص" : "person"}
+                {activity.price}{activity.currency} / {locale === "fr" ? "pers." : locale === "ar" ? "شخص" : locale === "es" ? "pers." : "person"}
               </span>
             </div>
           </div>

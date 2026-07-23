@@ -37,6 +37,8 @@ function ActivityCard({
       ? activity.descriptionFr
       : locale === "ar"
       ? activity.descriptionAr
+      : locale === "es"
+      ? activity.descriptionEs
       : activity.descriptionEn;
 
   const dur =
@@ -44,6 +46,8 @@ function ActivityCard({
       ? activity.durationFr
       : locale === "ar"
       ? activity.durationAr
+      : locale === "es"
+      ? activity.durationEs
       : activity.durationEn;
 
   const includes =
@@ -51,6 +55,8 @@ function ActivityCard({
       ? activity.includesFr
       : locale === "ar"
       ? activity.includesAr
+      : locale === "es"
+      ? activity.includesEs
       : activity.includesEn;
 
   return (
