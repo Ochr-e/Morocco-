@@ -1,6 +1,12 @@
-// Root page — next-intl middleware redirects to default locale (/fr)
-import { redirect } from "next/navigation";
+"use client";
+
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
 
 export default function RootPage() {
-  redirect("/fr");
+  const router = useRouter();
+  useEffect(() => {
+    router.replace("/fr");
+  }, [router]);
+  return null;
 }
