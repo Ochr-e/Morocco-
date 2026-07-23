@@ -2,71 +2,10 @@
 
 import { useTranslations, useLocale } from "next-intl";
 
-const STATS = [
-  { value: "1 500+", key: "clients" },
-  { value: "7", key: "years" },
-  { value: "4.9/5", key: "rating" },
-  { value: "12", key: "guides" },
-];
-
-function StarRating({ rating }: { rating: number }) {
-  return (
-    <div className="flex gap-0.5">
-      {[...Array(5)].map((_, i) => (
-        <svg
-          key={i}
-          width="14"
-          height="14"
-          viewBox="0 0 14 14"
-          fill={i < rating ? "#B8934A" : "#E8DCC8"}
-        >
-          <path d="M7 1L8.8 5.3H13.5L9.8 7.9L11.2 12.4L7 9.6L2.8 12.4L4.2 7.9L0.5 5.3H5.2L7 1Z" />
-        </svg>
-      ))}
-    </div>
-  );
-}
-
 export default function TrustSection() {
   const t = useTranslations("trust");
   const locale = useLocale();
   const isRTL = locale === "ar";
-
-  const testimonials = [
-    {
-      name: "Sophie Marchand",
-      origin: locale === "fr" ? "Paris, France" : locale === "ar" ? "باريس، فرنسا" : "Paris, France",
-      text: locale === "fr"
-        ? "Une journée dans le désert d'Agafay absolument magique. L'organisation était parfaite, le guide passionné, et le dîner sous les étoiles... inoubliable."
-        : locale === "ar"
-        ? "يوم رائع في صحراء أقفاي. التنظيم كان مثالياً، المرشد متحمساً، والعشاء تحت النجوم... لا يُنسى."
-        : "An absolutely magical day in the Agafay desert. The organization was perfect, the guide passionate, and the dinner under the stars... unforgettable.",
-      tour: locale === "fr" ? "Pack Désert Agafay" : locale === "ar" ? "باقة صحراء أقفاي" : "Agafay Desert Pack",
-      rating: 5,
-    },
-    {
-      name: "James & Emily Carter",
-      origin: locale === "ar" ? "لندن، المملكة المتحدة" : "London, UK",
-      text: locale === "fr"
-        ? "Le vol en montgolfière au-dessus de l'Atlas était le point culminant de notre voyage. Service de classe mondiale — professionnel, sûr et d'une beauté époustouflante."
-        : locale === "ar"
-        ? "رحلة المنطاد فوق جبال الأطلس كانت أبرز لحظات رحلتنا. خدمة عالمية المستوى — احترافية وآمنة وبديعة الجمال."
-        : "The hot air balloon ride over the Atlas Mountains was the highlight of our trip. World-class service — professional, safe, and breathtakingly beautiful.",
-      tour: locale === "fr" ? "Montgolfière Atlas" : locale === "ar" ? "منطاد الأطلس" : "Atlas Hot Air Balloon",
-      rating: 5,
-    },
-    {
-      name: "María González",
-      origin: locale === "ar" ? "مدريد، إسبانيا" : "Madrid, España",
-      text: locale === "fr"
-        ? "Le circuit de 3 jours à Merzouga était une expérience transformatrice. Les dunes au lever du soleil, le bivouac berbère, l'hospitalité marocaine... simplement parfait."
-        : locale === "ar"
-        ? "جولة 3 أيام في مرزوكة كانت تجربة تحويلية. الكثبان عند شروق الشمس، المخيم الأمازيغي، الضيافة المغربية... ببساطة مثالية."
-        : "The 3-day Merzouga circuit was a transformative experience. The dunes at sunrise, the Berber bivouac, the Moroccan hospitality... simply perfect.",
-      tour: locale === "fr" ? "Circuit Merzouga 3j/2n" : locale === "ar" ? "دائرة مرزوكة 3 أيام/2 ليالٍ" : "Merzouga Circuit 3d/2n",
-      rating: 5,
-    },
-  ];
 
   const certs = locale === "fr"
     ? [
@@ -116,60 +55,8 @@ export default function TrustSection() {
           <div className="mt-4 mx-auto gold-line" style={{ maxWidth: "80px" }} />
         </div>
 
-        {/* Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-20">
-          {STATS.map((stat) => (
-            <div key={stat.key} className={`text-center ${isRTL ? "text-right sm:text-center" : ""}`}>
-              <div
-                className="font-serif font-bold text-4xl md:text-5xl mb-2"
-                style={{ color: "#B8934A" }}
-              >
-                {stat.value}
-              </div>
-              <div className="text-sand/60 font-sans text-sm tracking-wide">
-                {t(`stats.${stat.key}` as Parameters<typeof t>[0])}
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Gold divider */}
+        {/* TODO: replace with real client testimonials and real business stats before launch. */}
         <div className="gold-line mb-20" />
-
-        {/* Testimonials */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
-          {testimonials.map((review, i) => (
-            <div
-              key={i}
-              className="bg-white/4 border border-gold/10 rounded-2xl p-8 hover:border-gold/25 transition-colors duration-300"
-            >
-              {/* Stars */}
-              <div className="mb-5">
-                <StarRating rating={review.rating} />
-              </div>
-
-              {/* Quote */}
-              <blockquote className={`font-sans text-sm text-sand/75 leading-relaxed mb-6 italic ${isRTL ? "text-right" : ""}`}>
-                &ldquo;{review.text}&rdquo;
-              </blockquote>
-
-              {/* Reviewer */}
-              <div className={`flex items-center gap-3 ${isRTL ? "flex-row-reverse" : ""}`}>
-                <div
-                  className="w-10 h-10 rounded-full flex items-center justify-center font-serif font-bold text-charcoal flex-shrink-0"
-                  style={{ background: "linear-gradient(135deg, #B8934A, #C1652F)" }}
-                >
-                  {review.name[0]}
-                </div>
-                <div className={isRTL ? "text-right" : ""}>
-                  <div className="text-cream font-sans font-semibold text-sm">{review.name}</div>
-                  <div className="text-sand/50 font-sans text-xs">{review.origin}</div>
-                  <div className="text-gold/70 font-sans text-xs mt-0.5">{review.tour}</div>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
 
         {/* Certifications + WhatsApp */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -229,6 +116,9 @@ export default function TrustSection() {
               </svg>
               {t("whatsapp.cta")}
             </a>
+            <p className={`mt-3 text-xs text-gold/70 font-sans ${isRTL ? "text-right" : ""}`}>
+              {t("whatsapp.placeholderNotice")}
+            </p>
           </div>
         </div>
       </div>

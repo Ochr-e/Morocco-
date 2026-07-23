@@ -140,18 +140,14 @@ export default function Footer() {
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="flex-shrink-0" style={{ color: "#B8934A" }}>
                   <path d="M2 4C2 3.45 2.45 3 3 3H5.5L6.5 6L5 7C5.5 8.5 7.5 10.5 9 11L10 9.5L13 10.5V13C13 13.55 12.55 14 12 14C6.48 14 2 9.52 2 4Z" stroke="currentColor" strokeWidth="1" fill="none"/>
                 </svg>
-                <a href={`tel:${t("phone")}`} className="text-sand/50 hover:text-gold font-sans text-sm transition-colors ltr-only">
-                  {t("phone")}
-                </a>
+                <span className="text-sand/50 font-sans text-sm">{t("phone")}</span>
               </li>
               <li className={`flex items-center gap-3 ${isRTL ? "flex-row-reverse text-right" : ""}`}>
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="flex-shrink-0" style={{ color: "#B8934A" }}>
                   <rect x="2" y="4" width="12" height="8" rx="1" stroke="currentColor" strokeWidth="1"/>
                   <path d="M2 5L8 9L14 5" stroke="currentColor" strokeWidth="1"/>
                 </svg>
-                <a href={`mailto:${t("email")}`} className="text-sand/50 hover:text-gold font-sans text-sm transition-colors">
-                  {t("email")}
-                </a>
+                <span className="text-sand/50 font-sans text-sm">{t("email")}</span>
               </li>
             </ul>
           </div>

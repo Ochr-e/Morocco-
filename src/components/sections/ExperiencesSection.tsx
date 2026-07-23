@@ -135,6 +135,12 @@ function ActivityCard({
 }
 
 const CATEGORIES: Category[] = ["transfer", "adrenaline", "excursion", "desert"];
+const CATEGORY_TRANSLATION_KEYS: Record<Category, string> = {
+  transfer: "transfer",
+  adrenaline: "adrenaline",
+  excursion: "excursion",
+  desert: "desert",
+};
 
 const CATEGORY_STYLES = {
   transfer: {
@@ -204,7 +210,6 @@ export default function ExperiencesSection() {
         {/* Category selector — horizontal strip */}
         <div className="flex flex-wrap justify-center gap-3 mb-16">
           {CATEGORIES.map((cat) => {
-            const catData = t(`categories.${cat}`);
             const isActive = cat === activeCategory;
             return (
               <button
@@ -225,7 +230,7 @@ export default function ExperiencesSection() {
                 }
               >
                 <span className={isRTL ? "ml-2" : "mr-2"}>{CATEGORY_ICONS[cat]}</span>
-                {t(`categories.${cat}.label` as Parameters<typeof t>[0])}
+                {t(`categories.${CATEGORY_TRANSLATION_KEYS[cat]}.label` as Parameters<typeof t>[0])}
               </button>
             );
           })}
@@ -246,19 +251,19 @@ export default function ExperiencesSection() {
             <span
               className={`inline-block text-xs tracking-[0.35em] font-sans font-medium uppercase mb-4 px-3 py-1 rounded-full ${style.labelBg} ${style.labelText}`}
             >
-              {t(`categories.${activeCategory}.label` as Parameters<typeof t>[0])}
+              {t(`categories.${CATEGORY_TRANSLATION_KEYS[activeCategory]}.label` as Parameters<typeof t>[0])}
             </span>
             <h3
               className="font-serif font-bold mb-3 leading-tight"
               style={{ color: style.accent, fontSize: "clamp(1.8rem, 4vw, 2.8rem)" }}
             >
-              {t(`categories.${activeCategory}.title` as Parameters<typeof t>[0])}
+              {t(`categories.${CATEGORY_TRANSLATION_KEYS[activeCategory]}.title` as Parameters<typeof t>[0])}
             </h3>
             <p className={`font-serif italic text-lg mb-3 ${style.taglineColor}`}>
-              "{t(`categories.${activeCategory}.tagline` as Parameters<typeof t>[0])}"
+              "{t(`categories.${CATEGORY_TRANSLATION_KEYS[activeCategory]}.tagline` as Parameters<typeof t>[0])}"
             </p>
             <p className={`font-sans text-sm leading-relaxed ${style.taglineColor}`}>
-              {t(`categories.${activeCategory}.description` as Parameters<typeof t>[0])}
+              {t(`categories.${CATEGORY_TRANSLATION_KEYS[activeCategory]}.description` as Parameters<typeof t>[0])}
             </p>
           </div>
         </div>

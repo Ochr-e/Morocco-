@@ -49,7 +49,8 @@ export default function BookingModal({ activity, onClose }: BookingModalProps) {
     .replace("{date}", date)
     .replace("{people}", String(totalPeople));
 
-  const waHref = `https://wa.me/212600000000?text=${encodeURIComponent(waMessage)}`;
+  const PLACEHOLDER_WHATSAPP_PHONE = "212600000000"; // PLACEHOLDER: replace with the real WhatsApp number before launch.
+  const waHref = `https://wa.me/${PLACEHOLDER_WHATSAPP_PHONE}?text=${encodeURIComponent(waMessage)}`;
 
   const dur =
     locale === "fr"

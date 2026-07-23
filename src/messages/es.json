@@ -15,9 +15,9 @@
   },
   "hero": {
     "tagline": "Marrakech · Agafay · Sáhara",
-    "headline": "El Sáhara te espera.",
-    "headline2": "Marrakech te llama.",
-    "subheadline": "Excursiones y aventuras de lujo desde Marrakech — a medida, para el viajero exigente.",
+    "headline": "Marrakech, tu base",
+    "headline2": "para todo tipo de aventuras.",
+    "subheadline": "Traslados de aeropuerto, adrenalina en Agafay, excursiones culturales y circuitos por el desierto — vive Marruecos desde Marrakech.",
     "cta": "Reserva tu aventura",
     "ctaSecondary": "Explorar experiencias",
     "scroll": "Desplazar"
@@ -31,7 +31,7 @@
         "title": "Traslado Aeropuerto",
         "tagline": "Llega. Nosotros nos encargamos del resto.",
         "description": "Traslado privado y cómodo hacia/desde el aeropuerto Marrakech-Menara. Conductor profesional, puntualidad garantizada.",
-        "price": "Desde 15€",
+        "price": "5€",
         "duration": "30 min",
         "badge": "Servicio discreto"
       },
@@ -42,8 +42,8 @@
         "description": "Quad, dromedario, globo aerostático, parapente — experiencias que redefinen tu relación con el horizonte.",
         "badge": "Emociones fuertes"
       },
-      "excursions": {
-        "label": "Excursiones",
+      "excursion": {
+        "label": "Excursiones Culturales",
         "title": "Excursiones de Día",
         "tagline": "Marruecos en toda su diversidad.",
         "description": "Essaouira, Ouzoud, Ourika, Aït Ben Haddou — cada destino revela otra faceta del Reino.",
@@ -74,37 +74,8 @@
     "includes": "Incluye"
   },
   "trust": {
-    "title": "Ellos vivieron la aventura",
-    "subtitle": "Viajeros de todo el mundo confían en nosotros.",
-    "stats": {
-      "clients": "clientes satisfechos",
-      "years": "años de experiencia",
-      "rating": "valoración media",
-      "guides": "guías certificados"
-    },
-    "testimonials": [
-      {
-        "name": "Sophie Marchand",
-        "origin": "París, Francia",
-        "text": "Un día absolutamente mágico en el desierto de Agafay. La organización fue perfecta, el guía apasionado, y la cena bajo las estrellas... inolvidable. Recomiendo Ochre Morocco con los ojos cerrados.",
-        "tour": "Pack Desierto Agafay",
-        "rating": 5
-      },
-      {
-        "name": "James & Emily Carter",
-        "origin": "Londres, Reino Unido",
-        "text": "El vuelo en globo aerostático sobre las montañas del Atlas fue el punto culminante de nuestro viaje a Marruecos. Un servicio de primera clase — profesional, seguro y de una belleza impresionante.",
-        "tour": "Globo Aerostático Atlas",
-        "rating": 5
-      },
-      {
-        "name": "María González",
-        "origin": "Madrid, España",
-        "text": "El tour de 3 días por el desierto de Merzouga fue una experiencia transformadora. Las dunas al amanecer, el campamento bereber, la hospitalidad marroquí... simplemente perfecto.",
-        "tour": "Circuito Merzouga 3d/2n",
-        "rating": 5
-      }
-    ],
+    "title": "Planifica tu aventura",
+    "subtitle": "Construyamos juntos tu experiencia marroquí desde Marrakech.",
     "certifications": {
       "title": "Seguridad y Certificaciones",
       "items": [
@@ -164,8 +135,8 @@
   "footer": {
     "tagline": "Aventura en el Desierto y Excursiones",
     "address": "Marrakech, Marruecos",
-    "phone": "+212 6XX XXX XXX",
-    "email": "hello@ochre-morocco.com",
+    "phone": "PLACEHOLDER — reemplazar número",
+    "email": "PLACEHOLDER — reemplazar correo electrónico",
     "sections": {
       "experiences": "Experiencias",
       "company": "Ochre Morocco",
@@ -193,6 +164,7 @@
   },
   "whatsapp": {
     "tooltip": "Chatea con nosotros",
+    "placeholderNotice": "WhatsApp PLACEHOLDER — reemplazar número antes del lanzamiento",
     "defaultMessage": "¡Hola Ochre Morocco! Estoy interesado en vuestras excursiones. ¿Podéis ayudarme?"
   }
 }

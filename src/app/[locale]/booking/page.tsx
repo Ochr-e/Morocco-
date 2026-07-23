@@ -4,6 +4,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import WhatsAppButton from "@/components/layout/WhatsAppButton";
 import Link from "next/link";
+import { activities } from "@/lib/activities";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -17,15 +18,6 @@ export default async function BookingPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "booking" });
-
-  const activities = [
-    { id: "agafay-pack", name: "Pack Désert Agafay", price: 65, category: "adrenaline" },
-    { id: "hot-air-balloon", name: "Montgolfière Atlas", price: 180, category: "adrenaline" },
-    { id: "merzouga", name: "Merzouga Erg Chebbi", price: 250, category: "desert" },
-    { id: "zagora", name: "Zagora Desert", price: 150, category: "desert" },
-    { id: "essaouira", name: "Essaouira", price: 35, category: "excursion" },
-    { id: "ait-ben-haddou", name: "Aït Ben Haddou & Ouarzazate", price: 45, category: "excursion" },
-  ];
 
   return (
     <>
@@ -60,7 +52,7 @@ export default async function BookingPage({ params }: Props) {
               >
                 <div>
                   <h3 className="font-serif font-semibold text-charcoal text-base leading-tight mb-1">
-                    {act.name}
+                    {act.nameKey}
                   </h3>
                   <span
                     className="text-xs font-sans px-2 py-0.5 rounded-full"
